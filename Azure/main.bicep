@@ -63,6 +63,7 @@ module inventory 'container_app.bicep' = {
     registry: acr.name
     envVars: shared_config
     externalIngress: false
+    minReplicas: 0
   }
 }
 
