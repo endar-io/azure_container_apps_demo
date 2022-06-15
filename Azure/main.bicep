@@ -47,7 +47,7 @@ module products 'container_app.bicep' = {
     containerAppEnvironmentId: env.outputs.id
     registry: acr.name
     envVars: shared_config
-    externalIngress: false
+    externalIngress: true
   }
 }
 
@@ -62,7 +62,7 @@ module inventory 'container_app.bicep' = {
     containerAppEnvironmentId: env.outputs.id
     registry: acr.name
     envVars: shared_config
-    externalIngress: false
+    externalIngress: true
     minReplicas: 0
   }
 }
