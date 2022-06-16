@@ -20,13 +20,14 @@ app.MapGet("/inventory/{productId}", (string productId, IMemoryCache memoryCache
     var memCacheKey = $"{productId}-inventory";
     int inventoryValue = -404;
     
-    if(!memoryCache.TryGetValue(memCacheKey, out inventoryValue))
-    {
-        inventoryValue = new Random().Next(1, 100);
-        memoryCache.Set(memCacheKey, inventoryValue);
-    }
+    // if(!memoryCache.TryGetValue(memCacheKey, out inventoryValue))
+    // {
+    //     inventoryValue = new Random().Next(1, 100);
+    //     memoryCache.Set(memCacheKey, inventoryValue);
+    // }
 
-    inventoryValue = memoryCache.Get<int>(memCacheKey);
+    // inventoryValue = memoryCache.Get<int>(memCacheKey);
+    inventoryValue = new Random().Next(1, 100);
 
     return Results.Ok(inventoryValue);
 })
