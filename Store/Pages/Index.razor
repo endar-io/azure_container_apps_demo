@@ -36,9 +36,9 @@
 
     protected override async Task OnInitializedAsync()
     {
-        Product[] tmp;
+        @* Product[] tmp;
         if (!_memoryCache.TryGetValue(cacheKey, out tmp))
-        {
+        { *@
             @* var products = await _storeBackendClient.GetProducts();
             foreach (var product in products)
             {
